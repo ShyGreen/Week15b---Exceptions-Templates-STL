@@ -5,17 +5,17 @@
 #include<string>
 using namespace std;
 
+//--- template class to be used for all other values
 template <class T>
 T half(T x)
 {
-	cout << "Template\n";
 	return (x / 2);
 }
 
+//--- specific int half function since int variables truncate the decimal value | it will calculate if the int value needs to be rounded up or down
 int half(int x)
 {
 	double remainder;//--- hold the remainder to check if the int vvalue needs to be rounded up or down
-	cout << "Int\n";
 	remainder = x % 2;
 	if (remainder > 0.5)
 	{
